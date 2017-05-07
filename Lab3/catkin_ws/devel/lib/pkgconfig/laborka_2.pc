@@ -1,0 +1,8 @@
+prefix=/home/seba/catkin_ws/devel
+
+Name: laborka_2
+Description: Description of laborka_2
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/seba/catkin_ws/devel/lib 
+Requires: 
