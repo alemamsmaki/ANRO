@@ -1,0 +1,17 @@
+<launch>
+	
+	<node pkg="beginner_tutorials" name="OINT_IKIN" type="OINT_IKIN"/>
+	<node pkg="beginner_tutorials" name="IKIN" type="IKIN"/>
+	<arg name="model" value="$(find beginner_tutorials)/urdf/lab5.urdf" />
+	<arg name="gui" value="False" />
+
+	<param name="robot_description" textfile="$(arg model)" />
+	<param name="use_gui" value="$(arg gui)"/>
+	
+	<param name="a2" value="0.4" />
+	<param name="a3" value="0.2" />
+    	<param name="d1" value="0.2" />
+    
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find beginner_tutorials)/urdf.rviz" required="true" />
+</launch>
